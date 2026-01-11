@@ -132,21 +132,24 @@
         <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
-                    <img src="<?= base_url('assets/img/gato.jpg') ?>"
-                         class="rounded-circle"
-                         style="width:30px;height:30px;">
-                    <span class="d-none d-md-inline">Cesar</span>
+                    <img src="<?= base_url('assets/img/admin.jpg') ?>"
+                       class="user-image rounded-circle shadow img-fluid"
+                       style="width:30px;height:30px;"
+                    >
+                    <span class="d-none d-md-inline">
+                  <?= esc(session()->get('usuario')) ?>
+                </span>
                 </a>
 
                 <div class="dropdown-menu dropdown-menu-right">
                     <div class="dropdown-item-text text-center">
-                        <img src="<?= base_url('assets/img/gato.jpg') ?>"
-                             class="rounded-circle mb-2"
-                             style="width:60px;height:60px;">
+                        <img src="<?= base_url('assets/img/admin.jpg') ?>"
+                            class="user-image rounded-circle shadow img-fluid"
+                            style="width:30px;height:30px;"
+                        >
                         <p class="mb-0">
-                            <strong>Cesar</strong><br>
-                            <small>Web Developer</small><br>
-                            <small>Miembro desde Sep. 2025</small>
+                            <?= esc(session()->get('usuario')) ?> 
+                            <small> Developer</small><br>
                         </p>
                     </div>
 

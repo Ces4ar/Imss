@@ -82,25 +82,30 @@
         <ul class="navbar-nav ms-auto">
             <li class="nav-item dropdown user-menu">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                    <img src="<?= base_url('assets/img/gato.jpg') ?>"
-                         class="rounded-circle shadow img-fluid"
-                         style="width:30px;height:30px;">
-                    <span class="d-none d-md-inline">Cesar</span>
+                    <img src="<?= base_url('assets/img/admin.jpg') ?>"
+                        class="user-image rounded-circle shadow img-fluid"
+                        style="width:30px;height:30px;"
+                    >
+                    <span class="d-none d-md-inline">
+                        <?= esc(session()->get('usuario')) ?>
+                    </span>
                 </a>
 
                 <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
                     <li class="user-header text-bg-primary text-center p-3">
-                        <img src="<?= base_url('assets/img/gato.jpg') ?>"
-                             class="rounded-circle shadow img-fluid mb-2"
-                             style="width:60px;height:60px;">
+                        <img src="<?= base_url('assets/img/admin.jpg') ?>"
+                            class="user-image rounded-circle shadow img-fluid"
+                            style="width:30px;height:30px;"
+                            >
                         <p class="mb-0">
-                            Cesar - Web Developer<br>
-                            <small>Miembro desde Sep. 2025</small>
+                            <?= esc(session()->get('usuario')) ?> Developer
                         </p>
                     </li>
 
                     <li class="user-footer d-flex justify-content-between p-2">
-                        <a href="#" class="btn btn-default btn-sm">Profile</a>
+                        <a href="<?= base_url('perfil') ?>" class="btn btn-default btn-flat">
+                            Profile
+                        </a>
                         <a href="<?= base_url('logout') ?>" class="btn btn-default btn-sm">
                             Sign out
                         </a>

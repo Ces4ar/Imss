@@ -168,20 +168,22 @@
             <!--begin::User Menu Dropdown-->
             <li class="nav-item dropdown user-menu">
               <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                <img src="<?= base_url('assets/img/gato.jpg') ?>"
+                <img src="<?= base_url('assets/img/admin.jpg') ?>"
                   class="user-image rounded-circle shadow img-fluid"
                   style="width:30px;height:30px;"  >
-                <span class="d-none d-md-inline">Cesar</span>
+                <span class="d-none d-md-inline">
+                  <?= esc(session()->get('usuario')) ?>
+                </span>
               </a>
               <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
                 <!--begin::User Image-->
                 <li class="user-header text-bg-primary">
-                  <img src="<?= base_url('assets/img/gato.jpg') ?>"
-                    class="user-image rounded-circle shadow img-fluid"
-                    style="width:30px;height:30px;"
-                  > 
+                <img src="<?= base_url('assets/img/admin.jpg') ?>"
+                  class="user-image rounded-circle shadow img-fluid"
+                  style="width:60px;height:60px;"
+                >
                   <p>
-                    Cesar  - Web Developer
+                    <?= esc(session()->get('usuario')) ?> - Web Developer
                     <small>Miembro desde Sep. 2025</small>
                   </p>
                 </li>
@@ -218,9 +220,9 @@
         <!--begin::Sidebar Brand-->
         <div class="sidebar-brand">
           <!--begin::Brand Link-->
-          <a href="./index.html" class="brand-link">
+          
             <!--begin::Brand Image-->
-           <img src="<?= base_url('assets/img/gato.jpg') ?>"
+           <img src="<?= base_url('assets/img/admin.jpg') ?>"
              class="user-image rounded-circle shadow img-fluid"
               style="width:30px;height:30px;"
             >
