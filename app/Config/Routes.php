@@ -15,14 +15,14 @@ $routes->get('plantilla', 'Auth::plantilla');
 $routes->get('logout', 'Auth::logout');
 $routes->get('dashboard', 'Dashboard::index', ['filter' => 'auth']);
 $routes->get('tables/simple', 'Tables::simple', ['filter' => 'auth']);
-$routes->get('salidas', 'Salidas::index');
-$routes->post('salidas/registrar', 'Salidas::registrar');
+$routes->get('salidas', 'salidas::index');
+$routes->post('salidas/registrar', 'salidas::registrar');
 
 $routes->get('usuarios', 'Usuarios::crear', ['filter' => 'auth']);
 $routes->post('usuarios/guardar', 'Usuarios::guardar', ['filter' => 'auth']);
 
-$routes->get('perfil', 'Perfil::index');
-$routes->post('perfil/actualizar', 'Perfil::actualizar');
+$routes->get('perfil', 'perfil::index');
+$routes->post('perfil/actualizar', 'perfil::actualizar');
 
 
 
