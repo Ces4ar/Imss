@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 
 class ArticulosModel extends Model
 {
-    protected $table = 'Articulos';
+    protected $table = 'articulos';
     protected $primaryKey = 'Id_articulo';
     protected $returnType = 'array';
 
